@@ -7,7 +7,8 @@ and prompt themes.
 
 Automatic Ubuntu Install Script
 ------------
-http://bit.ly/benjaminprezto
+wget http://bit.ly/benjaminprezto
+sh benjaminprezto
 Installation
 ------------
 
