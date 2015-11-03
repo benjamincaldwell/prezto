@@ -18,6 +18,9 @@ alias HR='printf "%$(tput cols)s\n" `date`|tr " " "="'
 #! easy c++ compiling and running
 function crc++() {  g++ -std=c++11 -o output "$1";./output;rm -rf output;}
 
+#up command to cd out of directories
+up() { [ $(( $1 + 0 )) -gt 0 ] && cd $(eval "printf '../'%.0s {1..$1}"); }
+
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
