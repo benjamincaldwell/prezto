@@ -11,3 +11,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export NVM_DIR="/home/benjamin/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#load shared and private functions
+for function in ~/.zprezto/functions/*; do
+  source $function
+done
+
+if [[ -d ~/.zshfunctions ]]; then
+  for function in ~/.zshfunctions/*; do
+    source $function
+  done
+fi
+
+#load shared and 'private' aliases
+[[ -f ~/.zprezto/aliases ]] && source ~/.zprezto/aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
