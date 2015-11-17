@@ -4,3 +4,6 @@ function crc++() {  g++ -std=c++11 -o output "$1";./output;rm -rf output;}
 #up command to cd out of directories
 up() { [ $(( $1 + 0 )) -gt 0 ] && cd $(eval "printf '../'%.0s {1..$1}"); }
 
+#cd and ls
+function cs () {cd "$@" && ls}
+
