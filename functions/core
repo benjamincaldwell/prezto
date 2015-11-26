@@ -7,3 +7,5 @@ up() { [ $(( $1 + 0 )) -gt 0 ] && cd $(eval "printf '../'%.0s {1..$1}"); }
 #cd and ls
 function cs () {cd "$@" && ls}
 
+#process filter
+function psls(){ps aux | { read line;echo "$line";grep --color -E "$1";}}
